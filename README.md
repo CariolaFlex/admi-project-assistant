@@ -29,7 +29,7 @@ Plataforma web interactiva para estudiar Administración de Proyectos, con calcu
 ```
 admi-project-assistant/
 ├── README.md                          ← Este archivo
-├── PP1 Admi Claude plataforma/
+├── admi-platform/
 │   ├── README.md                      ← Detalle de módulos y evaluaciones
 │   ├── M01_fundamentos.md
 │   ├── M02_WBS_actividades.md
@@ -51,7 +51,7 @@ admi-project-assistant/
 ## ⚡ Correr localmente
 
 ```bash
-cd "PP1 Admi Claude plataforma/app"
+cd "admi-platform/app"
 npm install
 npm run dev
 ```

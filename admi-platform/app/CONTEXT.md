@@ -6,7 +6,7 @@
 
 ## Cómo ejecutar el proyecto
 ```bash
-cd "PP1 Admi Claude plataforma/app"
+cd "admi-platform/app"
 npm install
 npm run dev
 # → http://localhost:5173
@@ -84,7 +84,7 @@ npm run dev
 ## Estructura del repo
 
 ```
-PP1 Admi Claude plataforma/
+admi-platform/
 ├── M01_fundamentos.md        ← Fuente de verdad del dominio
 ├── M02_WBS_actividades.md
 ├── M03_carta_gantt.md
