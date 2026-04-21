@@ -1,0 +1,76 @@
+export const ejerciciosGantt = [
+  {
+    id: 1,
+    prueba: 'PP1',
+    titulo: 'Remodelación de Oficina Modular',
+    tipo: 'laborales',
+    actividades: [
+      { code: 'A', name: 'Desmantelamiento de tabiques', duration: 3, predecessors: [] },
+      { code: 'B', name: 'Instalaciones eléctricas básicas', duration: 2, predecessors: ['A'] },
+      { code: 'C', name: 'Pintura de muros', duration: 4, predecessors: ['B'] },
+      { code: 'D', name: 'Instalación de piso flotante', duration: 3, predecessors: ['B'] },
+      { code: 'E', name: 'Montaje de mobiliario nuevo', duration: 2, predecessors: ['C', 'D'] },
+      { code: 'F', name: 'Limpieza y entrega final', duration: 1, predecessors: ['E'] },
+    ],
+    solucion: {
+      rutaCritica: ['A', 'B', 'C', 'E', 'F'],
+      duracionTotal: 12,
+    },
+    preguntas: [
+      'Dibuje la Carta Gantt del proyecto en días laborales.',
+      'Determine la ruta crítica y la duración total del proyecto.',
+    ],
+  },
+  {
+    id: 2,
+    prueba: 'PP1',
+    titulo: 'Lanzamiento de Campaña Constructora',
+    tipo: 'corridos',
+    actividades: [
+      { code: 'A', name: 'Estudio de factibilidad comercial', duration: 4, predecessors: [] },
+      { code: 'B', name: 'Diseño de material gráfico', duration: 6, predecessors: ['A'] },
+      { code: 'C', name: 'Obtención de permisos de publicidad', duration: 8, predecessors: ['A'] },
+      { code: 'D', name: 'Producción de letreros y banners', duration: 5, predecessors: ['B'] },
+      { code: 'E', name: 'Contratación de promotores', duration: 3, predecessors: ['B'] },
+      { code: 'F', name: 'Instalación de publicidad en terreno', duration: 4, predecessors: ['C', 'D'] },
+      { code: 'G', name: 'Evento de preventa', duration: 2, predecessors: ['F', 'E'] },
+    ],
+    solucion: {
+      rutaCritica: ['A', 'B', 'D', 'F', 'G'],
+      duracionTotal: 21,
+    },
+    preguntas: [
+      'Dibuje la Carta Gantt del proyecto en días corridos.',
+      'Determine la ruta crítica y duración total.',
+      '¿Qué actividades tienen holgura y cuántos días?',
+      'Si E se retrasa 4 días, ¿se afecta el proyecto?',
+    ],
+  },
+  {
+    id: 3,
+    prueba: 'PP1',
+    titulo: 'Instalación de Sistema de Climatización Industrial',
+    tipo: 'laborales',
+    actividades: [
+      { code: 'A', name: 'Ingeniería de detalle y cálculo', duration: 5, predecessors: [] },
+      { code: 'B', name: 'Compra de equipos y materiales', duration: 10, predecessors: ['A'] },
+      { code: 'C', name: 'Preparación de soportes estructurales', duration: 4, predecessors: ['A'] },
+      { code: 'D', name: 'Tendido de ductos principales', duration: 12, predecessors: ['B', 'C'] },
+      { code: 'E', name: 'Conexiones eléctricas y control', duration: 6, predecessors: ['B'] },
+      { code: 'F', name: 'Montaje de unidades exteriores', duration: 5, predecessors: ['B'] },
+      { code: 'G', name: 'Pruebas de presión y estanqueidad', duration: 3, predecessors: ['D'] },
+      { code: 'H', name: 'Puesta en marcha y calibración', duration: 4, predecessors: ['G', 'E', 'F'] },
+      { code: 'I', name: 'Capacitación a operadores de planta', duration: 2, predecessors: ['H'] },
+    ],
+    solucion: {
+      rutaCritica: ['A', 'B', 'D', 'G', 'H', 'I'],
+      duracionTotal: 36,
+    },
+    preguntas: [
+      'Dibuje la Carta Gantt en días laborales.',
+      'Determine la ruta crítica y duración total.',
+      'Si el cliente pide reducir 3 días, ¿qué actividades intervendrías?',
+      '¿Qué tareas pueden solaparse para acortar el plazo?',
+    ],
+  },
+]

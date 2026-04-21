@@ -1,0 +1,92 @@
+export const ejerciciosCpm = [
+  {
+    id: 1,
+    prueba: 'PP1',
+    titulo: 'Instalación de Faenas — Ruta del Sol',
+    actividades: [
+      { code: 'A', name: 'Instalación de cierres', duration: 2, predecessors: [] },
+      { code: 'B', name: 'Movimiento de tierras', duration: 4, predecessors: ['A'] },
+      { code: 'C', name: 'Instalación de bodegas', duration: 3, predecessors: ['A'] },
+      { code: 'D', name: 'Conexión de servicios', duration: 2, predecessors: ['B', 'C'] },
+    ],
+    solucion: {
+      rutaCritica: ['A', 'B', 'D'],
+      duracionTotal: 8,
+      tabla: [
+        { code: 'A', dur: 2, es: 0, ef: 2, ls: 0, lf: 2, ht: 0, critica: true },
+        { code: 'B', dur: 4, es: 2, ef: 6, ls: 2, lf: 6, ht: 0, critica: true },
+        { code: 'C', dur: 3, es: 2, ef: 5, ls: 3, lf: 6, ht: 1, critica: false },
+        { code: 'D', dur: 2, es: 6, ef: 8, ls: 6, lf: 8, ht: 0, critica: true },
+      ],
+    },
+    preguntas: [
+      'Construya el diagrama de flechas con todos los cálculos.',
+      'Identifique la ruta crítica.',
+      'Calcule la holgura de cada actividad.',
+    ],
+  },
+  {
+    id: 2,
+    prueba: 'PP1',
+    titulo: 'Construcción de Radier — Proyecto Altamar II',
+    actividades: [
+      { code: 'A', name: 'Trazado y niveles', duration: 2, predecessors: [] },
+      { code: 'B', name: 'Excavación', duration: 6, predecessors: ['A'] },
+      { code: 'C', name: 'Adquisición de acero', duration: 6, predecessors: [] },
+      { code: 'D', name: 'Enfierradura', duration: 3, predecessors: ['B', 'C'] },
+      { code: 'E', name: 'Instalaciones', duration: 2, predecessors: ['B'] },
+      { code: 'F', name: 'Hormigonado', duration: 4, predecessors: ['D', 'E'] },
+    ],
+    solucion: {
+      rutaCritica: ['A', 'B', 'D', 'F'],
+      duracionTotal: 15,
+      tabla: [
+        { code: 'A', dur: 2, es: 0, ef: 2, ls: 0, lf: 2, ht: 0, critica: true },
+        { code: 'B', dur: 6, es: 2, ef: 8, ls: 2, lf: 8, ht: 0, critica: true },
+        { code: 'C', dur: 6, es: 0, ef: 6, ls: 2, lf: 8, ht: 2, critica: false },
+        { code: 'D', dur: 3, es: 8, ef: 11, ls: 8, lf: 11, ht: 0, critica: true },
+        { code: 'E', dur: 2, es: 8, ef: 10, ls: 9, lf: 11, ht: 1, critica: false },
+        { code: 'F', dur: 4, es: 11, ef: 15, ls: 11, lf: 15, ht: 0, critica: true },
+      ],
+    },
+    preguntas: [
+      'Construya el diagrama de flechas (nota: hay 2 actividades sin predecesoras).',
+      'Complete la tabla de Holgura Total.',
+      'Si C se retrasa 2 días, ¿afecta la fecha de término del proyecto?',
+    ],
+  },
+  {
+    id: 3,
+    prueba: 'PP1',
+    titulo: 'Montaje Industrial — CobreAndes',
+    actividades: [
+      { code: 'A', name: 'Ingeniería', duration: 4, predecessors: [] },
+      { code: 'B', name: 'Fabricación', duration: 10, predecessors: ['A'] },
+      { code: 'C', name: 'Terreno', duration: 7, predecessors: ['A'] },
+      { code: 'D', name: 'Transporte', duration: 3, predecessors: ['B'] },
+      { code: 'E', name: 'Soportes', duration: 5, predecessors: ['C', 'D'] },
+      { code: 'F', name: 'Control', duration: 8, predecessors: ['D'] },
+      { code: 'G', name: 'Pruebas', duration: 4, predecessors: ['E'] },
+      { code: 'H', name: 'Puesta en marcha', duration: 2, predecessors: ['G', 'F'] },
+    ],
+    solucion: {
+      rutaCritica: ['A', 'B', 'D', 'E', 'G', 'H'],
+      duracionTotal: 28,
+      tabla: [
+        { code: 'A', dur: 4, es: 0, ef: 4, ls: 0, lf: 4, ht: 0, critica: true },
+        { code: 'B', dur: 10, es: 4, ef: 14, ls: 4, lf: 14, ht: 0, critica: true },
+        { code: 'C', dur: 7, es: 4, ef: 11, ls: 10, lf: 17, ht: 6, critica: false },
+        { code: 'D', dur: 3, es: 14, ef: 17, ls: 14, lf: 17, ht: 0, critica: true },
+        { code: 'E', dur: 5, es: 17, ef: 22, ls: 17, lf: 22, ht: 0, critica: true },
+        { code: 'F', dur: 8, es: 17, ef: 25, ls: 18, lf: 26, ht: 1, critica: false },
+        { code: 'G', dur: 4, es: 22, ef: 26, ls: 22, lf: 26, ht: 0, critica: true },
+        { code: 'H', dur: 2, es: 26, ef: 28, ls: 26, lf: 28, ht: 0, critica: true },
+      ],
+    },
+    preguntas: [
+      'Construya el diagrama de flechas con todas las fechas ES/EF/LS/LF.',
+      'Determine la ruta crítica y duración total.',
+      'Si el cliente exige terminar 3 días antes, ¿qué actividad reducirías y por qué?',
+    ],
+  },
+]
