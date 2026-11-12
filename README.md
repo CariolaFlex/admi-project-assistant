@@ -15,12 +15,14 @@ Plataforma web interactiva para estudiar Administración de Proyectos, con calcu
 
 | Tecnología | Versión |
 |---|---|
-| React | 18 |
+| React | 19 |
 | Vite | 8 |
 | Tailwind CSS | 3 |
-| Framer Motion | latest |
-| React Router | v6 |
-| lucide-react | latest |
+| Framer Motion | 12 |
+| React Router | 7 |
+| lucide-react | 1.8 |
+
+> Versiones verificadas contra `admi-platform/app/package.json` el 2026-11-12. Estado, conexiones y hallazgos en [`ESTADO.md`](ESTADO.md).
 
 ---
 
